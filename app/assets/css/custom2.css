@@ -10,20 +10,11 @@ body {
     height: auto;
 } 
 
+  
 /* navbar */
-#problem-overlay {
-    position: fixed;
-    z-index: 0;            /* Ensures the container and the row fix top div are on the same layer */
-  }
-
-#top-nav-bar {
-    margin:0px;
-  }
-
-
 .sidebar {
     height: 100vh;
-    background: linear-gradient(rgba(70, 64, 156, 0.548), rgba(0, 0, 0, .9)), url(../img/img1.jpeg); /* links to the image for the background */
+    background: linear-gradient(rgba(70, 64, 156, 0.548), rgba(0, 0, 0, .9)), url(../img/img1.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,15 +32,6 @@ body {
 .sidebar-link:hover {
     background-color: #444;
     border-radius: 5px;
-}
-
-.sidebar-item-padding {
-    padding-left: 5px;
-}
-
-.top-navbar {
-    height: 20%;
-    background: linear-gradient(rgba(167, 165, 202, 0.548), rgba(53, 27, 87, 0.377)), url(../img/img1.jpeg);
 }
 
 .current {
@@ -107,20 +89,17 @@ body {
 }
 
 @media (max-width: 768px) {
-    .row {
-        position: static;
-    }
-
-    .sidebar {
-        position: static;
-        height: auto;
-    }
-
-    .top-navbar {
-        position: static;
-        background: linear-gradient(rgba(167, 165, 202, 0.548), rgba(53, 27, 87, 0.377)), url(../img/img1.jpeg);
-    }
+.sidebar {
+    position: static;
+    height: auto;
 }
+}
+
+.top-navbar {
+    position: static;
+    background: linear-gradient(rgba(167, 165, 202, 0.548), rgba(53, 27, 87, 0.377)), url(../img/img1.jpeg);
+}
+
 /* end of navbar */
 
 /* cards */
@@ -134,15 +113,6 @@ body {
     transform: translateY(-1px);
 }
 
-input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
 /* end of cards */
   
   
