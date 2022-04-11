@@ -11,15 +11,17 @@ body {
 } 
 
 /* navbar */
-#problem-overlay {
+.ml-auto {
+    margin-left: auto;
+}
+
+.fixed-top {
     position: fixed;
-    z-index: 0;            /* Ensures the container and the row fix top div are on the same layer */
-  }
-
-#top-nav-bar {
-    margin:0px;
-  }
-
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+}
 
 .sidebar {
     height: 100vh;
@@ -48,7 +50,7 @@ body {
 }
 
 .top-navbar {
-    height: 20%;
+    margin-top: 5px;
     background: linear-gradient(rgba(167, 165, 202, 0.548), rgba(53, 27, 87, 0.377)), url(../img/img1.jpeg);
 }
 
@@ -134,7 +136,7 @@ body {
     transform: translateY(-1px);
 }
 
-input[type=text], select {
+input[type=email], select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -143,6 +145,36 @@ input[type=text], select {
     border-radius: 4px;
     box-sizing: border-box;
   }
+
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+input[type=name], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+input[type=date], select {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
 /* end of cards */
   
   
