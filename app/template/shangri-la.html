@@ -1,0 +1,42 @@
+{% from "_render_field.html" import render_field %}
+{% extends "base.html" %}
+{% block mainblock %}
+
+    <!-- First Card: Shangri-La Singapore -->
+    <div class="col-xl-3 col-lg-2 col-md-1">
+
+        <div class="mt-5 card card-common" style="width: 20rem;">
+            <img src="https://bit.ly/3Ifjcn6" class="card-img-top" alt="Shangri-La Singapore" style="width:250px;height:250px;">
+            <div class="card-body">
+            <h5 class="card-title">Shangri-La Singapore</h5>
+            <p class="card-text">Treat the entire family to a luxurious staycation experience complete with world-class culinary experiences at The Singapore.</p>
+            </div>
+        </div>   
+    </div>
+        
+    <div class="mt-5 card card-common" style="width: 40rem;">
+        <div class="card-header">
+            <h2>Select This Offer</h2>
+        </div>
+        <div class="card-body">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class=flashes>
+            {% for message in messages %}
+            <li style="color:red;">{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+        {% endwith %}
+            <form action="/check_in" method="post">
+                {{ render_field(form.email, type="date", id="date") }}
+                {{ form.hidden_tag() }}
+                <button type="submit" class="btn btn-primary", value="Submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
