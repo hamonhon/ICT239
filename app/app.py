@@ -2,22 +2,8 @@ from flask import Flask, render_template
 from flask_login import login_required, current_user
 from app import app, login_manager
 
-# Register Blueprint so we can factor routes
-# from bmi import bmi, get_dict_from_csv, insert_reading_data_into_database
-from auth import auth
-
-# register blueprint from respective module
-app.register_blueprint(auth)
-
-# Importing other python files
-from users import User
-
-# Load the current user if any
-@login_manager.user_loader
-def load_user(user_id):
-    return User.objects(pk=user_id).first()
-
 @app.route('/base')
+@app.route('/')
 def show_base():
     return render_template('base.html')
 
